@@ -30,6 +30,9 @@
                                 Account Number
                             </th>
                             <th>
+                                Account Balance
+                            </th>
+                            <th>
                                 Edit
                             </th>
                             <th>
@@ -57,6 +60,9 @@
                                         </td>
                                         <td>
                                             {{ $users->accounts->pluck('account_number')->values()->implode('account_number', ' ') }}
+                                        </td>
+                                        <td>
+                                            {{ $users->accounts->pluck('account_balance')->values()->implode('account_balance', ' ') }}
                                         </td>
                                         <td>
                                             <a href="{{ route('customer_account.edit', ['id'=>$users->id]) }}" class="btn btn-success btn-sm">Edit</a>

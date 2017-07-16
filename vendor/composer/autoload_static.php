@@ -283,6 +283,7 @@ class ComposerStaticInitc65f109d45b5e3492d2f31bc0c1f38d7
     );
 
     public static $classMap = array (
+        'AddAccountBalanceToAccountsTable' => __DIR__ . '/../..' . '/database/migrations/2017_07_16_083217_add_account_balance_to_accounts_table.php',
         'AdminProfileTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminProfileTableSeeder.php',
         'AdminTableSeeder' => __DIR__ . '/../..' . '/database/seeds/AdminTableSeeder.php',
         'App\\Account' => __DIR__ . '/../..' . '/app/Account.php',

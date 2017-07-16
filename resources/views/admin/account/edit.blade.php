@@ -75,6 +75,16 @@
                                 <span class="help-block">{{ $errors->first('account_number') }}</span>
                             @endif
                         </div>
+
+						<div class="form-group{{ $errors->has('account_balance') ? ' has-error' : '' }}">
+                            <label>Account Balance</label>
+                            <input class="form-control" value="{{ $account->account_balance }}" placeholder="Enter Balance in digit" name="account_balance" type="text" >
+
+                            @if($errors->has('account_balance'))
+                                <span class="help-block">{{ $errors->first('account_balance') }}</span>
+                            @endif
+                        </div>
+
 					</fieldset>
 					<div>
 						<div class="form-group">

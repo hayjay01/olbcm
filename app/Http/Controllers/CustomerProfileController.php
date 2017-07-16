@@ -12,6 +12,10 @@ use App\Profile;
 
 use CountryState;
 
+use App\Account;
+
+use App\User;
+
 use Illuminate\Http\Request;
 
 class CustomerProfileController extends Controller
@@ -32,10 +36,15 @@ class CustomerProfileController extends Controller
         $countries = CountryState::getCountries();
 
         $states = CountryState::getStates('NG');
-
+        $users = User::where('id',auth::user()->id)->first();
+        // dd($users);
+        // $account = Account::where('id', Auth::user()->accounts);
+        // dd($account);
         return view('customer.dashboard.profile.index')->with('settings', Setting::first())
                                                        ->with('country', $countries)
-                                                       ->with('state', $states);
+                                                       ->with('state', $states)
+                                                       ->with('users', $users);
+                                                       
     }
 
     /**

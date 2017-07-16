@@ -40,7 +40,7 @@
                 @else
                 <a href="{{ route('home') }}" class="btn btn-info btn-rounded waves-effect waves-light m-b-40">Back to home</a> </div>
                 @endif
-            <footer class="footer text-center">2017 © {{ $settings->site_email }}.</footer>
+            <footer class="footer text-center">2017 © {{ $settings->site_email }}. </footer>
         </div>
     </section>
     <!-- ============================================================== -->

@@ -6,6 +6,7 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'AddAccountBalanceToAccountsTable' => $baseDir . '/database/migrations/2017_07_16_083217_add_account_balance_to_accounts_table.php',
     'AdminProfileTableSeeder' => $baseDir . '/database/seeds/AdminProfileTableSeeder.php',
     'AdminTableSeeder' => $baseDir . '/database/seeds/AdminTableSeeder.php',
     'App\\Account' => $baseDir . '/app/Account.php',

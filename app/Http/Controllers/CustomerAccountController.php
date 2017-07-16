@@ -103,7 +103,8 @@ class CustomerAccountController extends Controller
        $account->account_name = $account_type->name;
        
        $customer->save();
-
+       
+       $account->account_balance = $request->account_balance;       
        $account->save();
 
        if($request->has('password'))
@@ -117,7 +118,7 @@ class CustomerAccountController extends Controller
            $customer->save();
        }
        
-       Session::flash('success', 'Account created for this user successfully');
+       Session::flash('success', 'Account updated for successfully');
 
        return redirect()->route('users');
        
@@ -128,8 +129,10 @@ class CustomerAccountController extends Controller
         $customer = User::find($id);
         $account_type = AccountType::all();
         $account = Account::where('user_id', $id)->first();
+        // dd($account);
         return view('admin.account.edit')->with('customer', $customer)
                                          ->with('account_type', $account_type)
+                                        //  ->with('account_type', $account_type)
                                          ->with('account', $account)
                                          ->with('settings', Setting::first());;
     }

@@ -119,7 +119,20 @@
                                 @endif
                             </select>
                         </div>
-                    </div
+                    </div>
+                    
+                    <div class="form-group col-sm-12">
+                        <label > Account Type:</label>
+                        <label >{{ $users->accounts->pluck('account_name')->values()->implode('account_name', ' ') }}</label>
+                    </div>
+
+                    <div class="form-group col-sm-12">
+                        <label > Account Balance:</label>
+                        <label style="color:red;">&#8358; {{ $users->accounts->pluck('account_balance')->values()->implode('account_balance', ' ') }}</label>
+                    </div>
+
+                    
+
                     <div class="form-group{{ $errors->has('state') ? ' has-error' : '' }}">
                         <label class="col-sm-12">Select State</label>
                         <div class="col-sm-12">

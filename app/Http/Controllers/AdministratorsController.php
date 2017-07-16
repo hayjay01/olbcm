@@ -81,6 +81,7 @@ class AdministratorsController extends Controller
             'email' => 'required|email|unique:users',
             'account_type_id' => 'required',
             'account_number' => 'required|regex:/^[0-9]{10}+$/|unique:accounts', 
+            'account_balance' => 'required|min:2'
             ]);
 
         //dd($request->all());
@@ -97,6 +98,7 @@ class AdministratorsController extends Controller
             'user_id' => $user->id,
             'account_number' => $request->account_number,
             'account_name' => $account->name,
+            'account_balance' => $request->account_balance,
         ]);
 
         $role = Role::create([
