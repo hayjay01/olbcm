@@ -1,4 +1,4 @@
-			<div id="get-in-touch">
+			{{--  <div id="get-in-touch">
 				<div class="fh5co-narrow-content">
 					<div class="row">
 						<div class="col-md-4 animate-box" data-animate-effect="fadeInLeft">
@@ -38,4 +38,4 @@
 						
 					</div>
 				</div>
-			</div>
+			</div>  --}}

@@ -11,7 +11,7 @@
 			</nav>
 
 			<div class="fh5co-footer">
-				<p><small>&copy; {{ $settings->site_email }}</span> <span>Developed by <a href="" target="">08167097793 & 07017400751</a> </span></small></p>
+				  <p><small>&copy; {{ $settings->site_email }}</span> </small></p>  
 				<ul>
 					<li><a href="{{ $settings->site_facebook }}"><i class="icon-facebook2"></i></a></li>
 					<li><a href="{{ $settings->site_twitter }}"><i class="icon-twitter2"></i></a></li>
